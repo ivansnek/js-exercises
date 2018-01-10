@@ -3,6 +3,8 @@
 */
 
 const PERSONS = [
+  { names: 'Juan' , lastnames: 'Barrios Fernandez', birthdate: new Date(1979,12,1), type: 'fisica' },
+  { names: 'Eva' , lastnames: 'Iriarte Mendez', birthdate: new Date(1979,12,1), type: 'fisica' },
   { names: 'Juan Antonio' , lastnames: 'Fernandez Muñoz', birthdate: new Date(1979,12,1), type: 'fisica' },
   { names: 'Jose Carlos' , lastnames: 'Hernandez Perez', birthdate: new Date(1979,12,1), type: 'fisica' },
   { names: 'Brenda Liliana' , lastnames: 'Gutierrez Velasco', birthdate: new Date(1979,12,1), type: 'fisica' },
@@ -23,3 +25,4 @@ const PERSONS = [
 ];
 
 // YOUR CODE
+// Frank's
