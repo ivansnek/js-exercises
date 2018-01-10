@@ -11,7 +11,7 @@ const PERSONS = [
   { names: 'Luis Alberto' , lastnames: 'Elizondo Obrador', birthdate: new Date(1979,12,1), type: 'fisica' },
   { names: 'Elvia' , lastnames: 'Jimenez Sanchez', birthdate: new Date(1979,12,1), type: 'fisica' },
   { names: 'Pedro Joaquin' , lastnames: 'Alvarado Obregon', birthdate: new Date(1979,12,1), type: 'fisica' },
-
+  { names: 'Peter', lastnames: 'soy io', birthdate: new Date(1979,12,1), type: 'fisica' },
   { name: 'Sonora Industrial Azucarera, S. de. R.L.	' , foundation: new Date(2012,9,13), type: 'moral' },
   { name: 'Internacional Turística Flacón, S.A.' , foundation: new Date(1979,2,12), type: 'moral' },
   { name: 'Candados, Llaves y Cerraduras, S.A.' , foundation: new Date(1999,1,11), type: 'moral' },
