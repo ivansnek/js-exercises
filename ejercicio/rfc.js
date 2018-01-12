@@ -1,5 +1,11 @@
 const PERSONS = require('./data');
 
+/*
+   NOTAS:
+  - Como buena practica procurar que las lineas no sobrepasen las 80 caracteres
+    para evitar usar los scrolls horizontales al leer el codigo.
+*/
+
 let eliminaArticulos = (elemento) => {
   let temp = elemento.toLowerCase();
   return temp != "el" && temp != "la" && temp != "los" && temp != "las" && temp != "un" && temp != "una" && temp != "unos" && temp != "unas";
@@ -43,6 +49,11 @@ let getDia = (persona) => {
 
 let getRFC_fisicas = (opcion, persona) => {
   let rfc = "";
+  // NOTA: Usar constantes y no valores para los cases, ejemplo:
+  // const DESCRIPCION_CASO = 1
+  // ...
+  // case DESCRIPCION_CASO:
+  // ...
   switch (opcion) {
     case 1:
       let nombre = (persona.names[0] != "JOSE" && persona.names[0] != "MARIA") ? persona.names[0].substring(0, 2) : persona.names[1].substring(0, 2);
@@ -63,6 +74,9 @@ while (i < PERSONS.length) {
     let persona = procesa(PERSONS[i]);
     let rfc = "";
     if (persona.lastnames[0].length < 3 && persona.names.length === 2 && persona.lastnames.length === 1) {
+      // NOTA: Seria bueno usar alguna constante para asignarle a esos valores 1 y 2
+      // Para cuando alguien lea el codigo entienda que hara la funcion con esos parametros
+      // sin tener que ver el codigo del método
       rfc = getRFC_fisicas(1, persona);
     } else if (persona.lastnames[0].length > 3 && persona.names.length === 2 && persona.lastnames.length === 1) {
       rfc = getRFC_fisicas(2, persona);
