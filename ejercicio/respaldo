@@ -1,0 +1,48 @@
+
+
+// let getRFC = (persona, regla)=>{
+//   let rfc = "";
+//   switch(regla){
+//     case 3:
+//       rfc = persona.lastnames[0].substring(0,1) + persona.lastnames[0].substring(primeraVocal(persona.lastnames[0]),primeraVocal(persona.lastnames[0])+1) + persona.lastnames[1].substring(0,1)+ persona.names[0].substring(0,1);
+//       break;
+//     case 4:
+//       rfc = persona.lastnames[0].substring(0,1) + persona.lastnames[1].substring(0,1) + persona.names[0].substring(0,2);
+//       break;
+//     case 6:
+//       if(persona.names[0].toUpperCase()!=="MARIA" && persona.names[0].toUpperCase()!=="JOSE"){
+//         persona.lastnames[0].substring(0,1) + persona.lastnames[0].substring(primeraVocal(persona.lastnames[0]),primeraVocal(persona.lastnames[0])+1) + persona.lastnames[1].substring(0,1)+ persona.names[0].substring(0,1);
+//       }else{
+//         persona.lastnames[0].substring(0,1) + persona.lastnames[0].substring(primeraVocal(persona.lastnames[0]),primeraVocal(persona.lastnames[0])+1) + persona.lastnames[1].substring(0,1)+ persona.names[1].substring(0,1);
+//       }
+//       break;
+//     case 7:
+//       rfc = persona.lastnames[0].substring(0,2)+persona.names[0].substring(0,2);
+//       break;
+//     default:
+//       break;
+//   }
+//   return rfc + persona.birthdate.getYear() + getMes(persona) + getDia(persona); 
+// }
+
+
+
+  // if(PERSONS[i].type==="fisica"){ // persona fisica
+  //   let persona = procesa(PERSONS[i]);
+  //   if(persona.names.length===2){ // tiene dos nombres
+  //     if(persona.lastnames.length===2){ // tiene dos apellidos
+  //       if(persona.lastnames[0].length>2){ // el apellido paterno tiene un tamanio mayor a 2
+  //         rfc = getRFC(persona,3);
+  //       }else{ // el apellido paterno es menor a dos letras
+  //         rfc = getRFC(persona,4);
+  //       }
+  //     }else{ // solo tiene un apellido
+  //       console.log("un apellido");
+  //     }
+  //   }else{ // solo tiene un nombre
+  //     rfc = getRFC(persona,7);
+  //   }
+  //   console.log(eliminaMalasPalabras(rfc));
+  // }else{ // persona moral
+  //   console.log("persona moral");
+  // }

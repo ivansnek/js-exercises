@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="Nombre" id="nombre"><br><br>
+  <input type="text" placeholder="Apellido paterno" id="apellp"><br><br>
+  <input type="text" placeholder="Apellido materno" id="apellm"><br><br>
+  <input type="date" id="fecha"><br><br>
+  <hr>
+  <button onclick="procesa()">Crear</button>
+  <hr>
+  <div id="rfc"></div>
+  <script>;
+
+    let primeraVocal = function(cadena){
+      let i=0;
+      let vocal = false;
+      while(i<cadena.length){
+        if(cadena.charAt(i)=='a' || cadena.charAt(i)=='e' || cadena.charAt(i)=='i' || cadena.charAt(i)=='o' || cadena.charAt(i)=='u'){
+          return i;
+        }
+        i++;
+      }
+    }
+
+    let procesa = function(){
+      let nombre = document.getElementById('nombre').value;
+      let apellp = document.getElementById('apellp').value;
+      let apellm = document.getElementById('apellm').value;
+      let fecha = (document.getElementById('fecha').value).split("-");
+      if(nombre!="" && apellp!=""){ // ||
+        let rfc = apellp.substring(0,1) + apellp.substring(primeraVocal(apellp),primeraVocal(apellp)+1)+apellm.substring(0,1)+ nombre.substring(0,1);
+        rfc += fecha[0].substring(2,4) + fecha[1] + fecha[2];
+        document.getElementById('rfc').innerHTML = rfc.toUpperCase();
+      }else{
+        document.getElementById('rfc').innerHTML = "Faltan datos";
+      }
+    }
+
+  </script>
+</body>
+</html>
