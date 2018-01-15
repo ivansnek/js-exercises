@@ -173,7 +173,6 @@ let paternoMenosDosF = function (personas) {
       mater = materno[j + 1];
     }
   }
-
   //nombre - dos primeras letras
   upper = personas.names.toUpperCase();
   nom1 = upper.charAt(0);
